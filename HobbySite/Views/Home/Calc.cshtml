@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Tutoring Calculator";
+}
+<div class="container mt-5">
+    <div class="card p-3 text-center">
+        <h1>@ViewData["Title"]</h1>
+
+        <p>If you want to be taught the basics of rock climbing check out this tutoring price calculator.</p>
+
+        <form id="calcForm" class="text-center">
+            <div class="form-group">
+                <label>Hours (1-5hrs): </label>
+                <input id="hours" type="number" class="form-control" min="1" max="5" required />
+            </div>
+            <div class="form-group">
+                <label>Hourly Rate: </label>
+                <input id="costph" type="text" class="form-control" readonly value="$15" />
+            </div>
+            <br />
+            <button id="calcButton" class="btn btn-primary">Calculate Total</button>
+            <button type ="button" id="reset" class="btn btn-secondary">Reset</button>
+        </form>
+        <div class="form-group mt-3"
+            <label>Total: </label>
+            <div id="total" class="form-control border" ></div>
+        </div>
+    </div>
+</div>
+<style>
+    .card{
+        max-width: fit-content;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .form-control{
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+</style>
